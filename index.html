@@ -9,21 +9,24 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-<style>
-
-</style>
 </head>
-<body>
 
+<body>
+<div></div>
 
 <script>
-    $(window).on( "orientationchange", function(event) {
-        if(window.innerWidth > window.innerHeight){
-            alert('가로 모드 전환');
-        }else{
-            alert('세로 모드 전환');
-        }
-    }); 
+    var ios = navigator.userAgent.match(/(iPod|iPhone|iPad)/)
+    if (ios) {
+        $(window).on("load orientationchange", function(event) {
+            $(window).one('resize', function() {
+                if (window.innerWidth > window.innerHeight) {
+                    $('div').text('가로 모드 전환')
+                } else {
+                    $('div').text('세로 모드 전환')
+                }
+            });
+        });
+    }
 </script>
 </body>
 </html>
