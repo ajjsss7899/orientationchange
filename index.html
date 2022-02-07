@@ -18,12 +18,14 @@
 
 <script>
    $(window).on( "orientationchange", function(event) {
-        if(event.orientation == 'portrait'){
-            alert('portrait');
-        }
-        else if(event.orientation == 'landscape') {
-            alert('landscape');
-        }
+        if(window.screen.orientation.type == 'landscape-primary')
+    {
+        alert('가로');
+    }
+    if(window.screen.orientation.type == 'portrait-primary')
+    {
+        alert('세로')
+    }
     }); 
 </script>
 </body>
