@@ -17,9 +17,14 @@
 
 
 <script>
-   $( window ).on( "orientationchange", function( event ) {
-        alert( "This device is in " + event.orientation + " mode!" );
-    });
+   $(window).on( "orientationchange", function(event) {
+        if(event.orientation == 'portrait'){
+            alert('portrait');
+        }
+        else if(event.orientation == 'landscape') {
+            alert('landscape');
+        }
+    }); 
 </script>
 </body>
 </html>
