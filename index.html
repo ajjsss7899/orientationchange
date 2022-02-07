@@ -18,6 +18,7 @@
 
 <script>
     $(window).on( "orientationchange", function(event) {
+        alert('test')
         if (window.screen.orientation.type == 'landscape-primary' || window.orientation == 90 || window.orientation == -90) {
             alert('가로 모드 전환');
         }
