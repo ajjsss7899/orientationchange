@@ -18,13 +18,10 @@
 
 <script>
     $(window).on( "orientationchange", function(event) {
-        alert('test')
-        if (window.screen.orientation.type == 'landscape-primary' || window.orientation == 90 || window.orientation == -90) {
+        if(window.innerWidth > window.innerHeight){
             alert('가로 모드 전환');
-        }
-
-        if(window.screen.orientation.type == 'portrait-primary' || window.orientation == 0 || window.orientation == 180){
-            alert('세로 모드 전환')
+        }else{
+            alert('세로 모드 전환');
         }
     }); 
 </script>
