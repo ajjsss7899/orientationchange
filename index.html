@@ -17,15 +17,13 @@
 
 
 <script>
-   $(window).on( "orientationchange", function(event) {
-        if(window.screen.orientation.type == 'landscape-primary')
-    {
-        alert('가로');
-    }
-    if(window.screen.orientation.type == 'portrait-primary')
-    {
-        alert('세로')
-    }
+    $(window).on( "orientationchange", function(event) {
+        if(window.screen.orientation.type == 'landscape-primary'){
+            alert('가로 모드 전환');
+        }
+        if(window.screen.orientation.type == 'portrait-primary'){
+            alert('세로 모드 전환')
+        }
     }); 
 </script>
 </body>
